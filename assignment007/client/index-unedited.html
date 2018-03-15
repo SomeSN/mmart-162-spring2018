@@ -9,8 +9,7 @@
     </head>
     <body>
         <div id="main">
-        <!-- Button that opens the form to add a new blog entry -->
-		<h1>Blog <button class="show button-action right">Add New Post</button></h1>
+            <h1>Blog <button class="show button-action right">Add New Post</button></h1>
             <!-- 1. Container gets populated via API -->
             <div id="container"></div>
         </div>
@@ -19,24 +18,17 @@
         <!-- 2. Hidden Modal (for adding / editing blog posts) -->
         <div class="modal">
             <div class="content">
-				<!-- The label of the "window" that opens and the x button that closes it -->
-				<header>
+                <header>
                     <span class="close">×</span>
                     <h1>Add Post</h1>
                 </header>
                 <div class="body">
                     <!-- Blog Form -->
                     <form class="form-inline">
-						<!-- Input areas for the various aspects of the blog entry -->
-						<div class="row">
+                        <div class="row">
                             <label>Blog Title:</label>
                             <input id="name" type="text" placeholder="Blog title">
                         </div>
-                        <div class="row">
-                            <label>Image:</label>
-                            <input id="imageURL" type="text" placeholder="Image URL goes here">
-                            <input id="imageAltText" type="text" placeholder="Default alt text">
-						</div>
                         <div class="row">
                             <label>URL:</label>
                             <input id="url" type="text" placeholder="Link to more information">
@@ -47,7 +39,6 @@
                         </div>
                     </form>
                 </div>
-				<!-- Buttons that saves the entry or cancels out. -->
                 <footer>
                     <button class="button-secondary">Cancel</button>
                     <button class="button-primary">Save</button>

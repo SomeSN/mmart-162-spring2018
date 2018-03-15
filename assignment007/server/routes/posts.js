@@ -1,3 +1,4 @@
+/* Functins that log the status of things on the server */
 module.exports = {
     getPosts(req, res) {
         console.log('\n\n-------- YOUR DATA STORE --------')

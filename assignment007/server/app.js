@@ -1,3 +1,4 @@
+/* Module requires for node */
 const express = require('express')
 const errorhandler = require('errorhandler')
 const logger = require('morgan')
@@ -5,19 +6,26 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const routes = require('./routes')
 
+/* Store object containing all the posts currently on the site. Defaults to an example post using the data below. */
 let store = {
-    posts: [{
-        name: 'What is going on right now in this EdX course?',
-        url: 'https://courses.edx.org/courses/course-v1:Microsoft+DEV283x+2T2017/course/',
-        text: 'As we have already discussed, this course is a little advanced and some of the language and concepts are glossed over because the teacher already assumes basic fluency with server-side programming. That is OK. You will still learn a ton, even if you don\'t understand everything. You are learning to use developer documentation and resources, and we will go over the jargon and concepts in class.',
-        comments: [{
-                text: 'So many assumptions are being made about what we already know?! This is overwhelming!'
-            }, {
-                text: 'This is great! At the end of this unit, we\'re going to be able to make our own API.'
-            }, {
-                text: 'How do we make this live? On a real server?!!'
-        }]
-    }]
+    posts: [
+		{
+			name: 'What is going on right now in this EdX course?',
+			imageURL: 'http://maxpixel.freegreatpicture.com/static/photo/2x/Sunrise-Country-Horizon-The-Clouds-The-Sky-Dawn-982013.jpg',
+			imageAltText: 'This image has alternate text woo!',
+			url: 'https://courses.edx.org/courses/course-v1:Microsoft+DEV283x+2T2017/course/',
+			text: 'As we have already discussed, this course is a little advanced and some of the language and concepts are glossed over because the teacher already assumes basic fluency with server-side programming. That is OK. You will still learn a ton, even if you don\'t understand everything. You are learning to use developer documentation and resources, and we will go over the jargon and concepts in class.',
+			comments: [
+				{
+					text: 'So many assumptions are being made about what we already know?! This is overwhelming!'
+				}, {
+					text: 'This is great! At the end of this unit, we\'re going to be able to make our own API.'
+				}, {
+					text: 'How do we make this live? On a real server?!!'
+				}
+			]
+		}
+	]
 }
 
 
